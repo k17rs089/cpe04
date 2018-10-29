@@ -152,7 +152,7 @@
     // 変数宣言
     var period = 0;
     var active = false;
-     var startTime = 0;
+    var startTime = 0;
    
     // ボタンの初期設定
     function init(){
@@ -196,6 +196,9 @@
         $("#remai").html("残り時間; "+rest);
         analog(rest);
 
+        if(rest <= 0) {
+          active = false;
+        }
     }
     
  
@@ -205,10 +208,6 @@
           var currentTime = new Date();
           var time = (currentTime - startTime)/1000;
           $("#time").html("経過時間; "+parseInt(time));
-        }
-
-        if(rest <= 0) {
-          active = false;
         }
     } 
 
