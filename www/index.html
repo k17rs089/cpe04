@@ -187,6 +187,11 @@
 
         var active = false;
         var startTime = 0;
+
+        active = false;
+        period = 60*parseInt($("#minute").val()) + parseInt($("#second").val);
+        $("#remain").html("残り時間: "+period);
+        $("#time").html("経過時間: 0");
     }
     
  
