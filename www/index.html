@@ -192,6 +192,10 @@
         period = 60*parseInt($("#minute").val()) + parseInt($("#second").val);
         $("#remain").html("残り時間: "+period);
         $("#time").html("経過時間: 0");
+
+        var rest = period - parseInt(time);
+        $("#remai").html("残り時間; "+rest);
+        analog(rest);
     }
     
  
